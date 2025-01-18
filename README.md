@@ -34,7 +34,7 @@ import (
     "fc_test" // the generated factory code will be in this package
 )
 
-//go:generate go run metalfm/factory/fcgen -type=User
+//go:generate go run metalfm/github.com/metalfm/factory/fcgen -type=User
 
 type User struct {
     ID       int
@@ -72,7 +72,7 @@ func TestUser(t *testing.T) {
 
 In terms of use, it looks simple, doesn't it? All the magic happens after launch `//go:generate`, we call a `fcgen` that analyzes the AST tree with the code, generates simple setters and setter functions for the `User` structure.
 
-You can take a look at the generated code [here](https://github.com/metalfm/factory/blob/main/internal/tests/entity/fc/user_gen.go), it is very easy to understand what it does.
+You can take a look at the generated code [here](https://github.com/metalfm/github.com/metalfm/factory/blob/main/internal/tests/entity/fc/user_gen.go), it is very easy to understand what it does.
 
 ### Possibilities
 
@@ -99,7 +99,7 @@ import (
     "fc_test"
 )
 
-//go:generate go run metalfm/factory/fcgen -type=User
+//go:generate go run metalfm/github.com/metalfm/factory/fcgen -type=User
 
 type User struct {
     ID       int
@@ -133,7 +133,7 @@ import (
     "fc_test"
 )
 
-//go:generate go run metalfm/factory/fcgen -type=User
+//go:generate go run metalfm/github.com/metalfm/factory/fcgen -type=User
 
 type User struct {
     ID        uuid.UUID
@@ -162,7 +162,7 @@ import (
     "fc_test"
 )
 
-//go:generate go run metalfm/factory/fcgen -type=User,Order
+//go:generate go run metalfm/github.com/metalfm/factory/fcgen -type=User,Order
 
 type User struct {
     Name string
@@ -200,7 +200,7 @@ import (
     "fc_test"
 )
 
-//go:generate go run metalfm/factory/fcgen -type=User
+//go:generate go run metalfm/github.com/metalfm/factory/fcgen -type=User
 
 type User struct {
     ID   int
@@ -236,7 +236,7 @@ func TestUser(t *testing.T) {
 ```
 
 ### Generics
-See real world example [here](https://github.com/metalfm/factory/blob/main/internal/tests/entity/document_test.go).
+See real world example [here](https://github.com/metalfm/github.com/metalfm/factory/blob/main/internal/tests/entity/document_test.go).
 
 ### Setter priority
 You can always override the default values to get the desired data set for your test:
@@ -250,7 +250,7 @@ import (
     "fc_test"
 )
 
-//go:generate go run metalfm/factory/fcgen -type=User
+//go:generate go run metalfm/github.com/metalfm/factory/fcgen -type=User
 
 type User struct {
     Name string
@@ -275,7 +275,7 @@ func TestUser(t *testing.T) {
 
 ### More examples
 
-Try to find some example code in [tests](https://github.com/metalfm/factory/tree/main/internal/tests/entity).
+Try to find some example code in [tests](https://github.com/metalfm/github.com/metalfm/factory/tree/main/internal/tests/entity).
 
 ## Known limitations
 
@@ -324,4 +324,4 @@ type S1[T any] struct { // do this
 
 ## License
 
-Fcgen is licensed under the MIT License. See [LICENSE](https://github.com/metalfm/factory/blob/main/LICENSE) for more information.
+Fcgen is licensed under the MIT License. See [LICENSE](https://github.com/metalfm/github.com/metalfm/factory/blob/main/LICENSE) for more information.

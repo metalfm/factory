@@ -3,7 +3,7 @@ package fc_entity
 import (
 	"time"
 
-	"factory/internal/tests/entity"
+	"github.com/metalfm/factory/internal/tests/entity"
 )
 
 var DocumentCN = NewFactoryDocument[entity.PayloadCreditNote](

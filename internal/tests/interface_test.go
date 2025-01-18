@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"factory/internal/tests"
-	fc_tests "factory/internal/tests/fc"
+	"github.com/metalfm/factory/internal/tests"
+	fc_tests "github.com/metalfm/factory/internal/tests/fc"
 
 	"github.com/stretchr/testify/assert"
 )

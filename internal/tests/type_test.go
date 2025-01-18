@@ -5,12 +5,12 @@ import (
 	"errors"
 	"testing"
 
-	"factory/internal/tests"
+	"github.com/metalfm/factory/internal/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	fc_tests "factory/internal/tests/fc"
+	fc_tests "github.com/metalfm/factory/internal/tests/fc"
 )
 
 func TestTypes(t *testing.T) {

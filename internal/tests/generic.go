@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"factory/internal/tests/entity"
+	"github.com/metalfm/factory/internal/tests/entity"
 )
 
 //go:generate go run ../../fcgen.go -type=Generic

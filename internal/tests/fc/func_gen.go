@@ -4,9 +4,9 @@ package fc_tests
 
 import (
 	context "context"
-	tests "factory/internal/tests"
-	entity "factory/internal/tests/entity"
 	fmt "fmt"
+	tests "github.com/metalfm/factory/internal/tests"
+	entity "github.com/metalfm/factory/internal/tests/entity"
 	atomic "sync/atomic"
 	time "time"
 	time1 "time"

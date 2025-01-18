@@ -8,7 +8,7 @@ import (
 	"maps"
 	"strings"
 
-	"factory/internal/fc"
+	"github.com/metalfm/factory/internal/fc"
 )
 
 type generator interface {

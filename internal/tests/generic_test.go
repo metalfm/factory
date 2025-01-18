@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"factory/internal/tests"
-	"factory/internal/tests/entity"
-	fc_tests "factory/internal/tests/fc"
+	"github.com/metalfm/factory/internal/tests"
+	"github.com/metalfm/factory/internal/tests/entity"
+	fc_tests "github.com/metalfm/factory/internal/tests/fc"
 )
 
 func TestGeneric(t *testing.T) {

@@ -1,7 +1,7 @@
 package fc_entity
 
 import (
-	"factory/internal/tests/entity"
+	"github.com/metalfm/factory/internal/tests/entity"
 )
 
 var User = NewFactoryUser(

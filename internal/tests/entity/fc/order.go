@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"factory/internal/tests/entity"
+	"github.com/metalfm/factory/internal/tests/entity"
 )
 
 var Order = NewFactoryOrder(

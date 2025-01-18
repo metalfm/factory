@@ -4,8 +4,8 @@ package fc_entity
 
 import (
 	context "context"
-	entity "factory/internal/tests/entity"
 	fmt "fmt"
+	entity "github.com/metalfm/factory/internal/tests/entity"
 	atomic "sync/atomic"
 )
 

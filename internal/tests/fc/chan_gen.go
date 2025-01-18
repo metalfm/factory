@@ -4,8 +4,8 @@ package fc_tests
 
 import (
 	context "context"
-	tests "factory/internal/tests"
 	fmt "fmt"
+	tests "github.com/metalfm/factory/internal/tests"
 	atomic "sync/atomic"
 	time "time"
 	time1 "time"

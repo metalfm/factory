@@ -9,8 +9,8 @@ import (
 	"path"
 	"strings"
 
-	"factory/internal/fc"
-	"factory/internal/fc/gen"
+	"github.com/metalfm/factory/internal/fc"
+	"github.com/metalfm/factory/internal/fc/gen"
 )
 
 var (

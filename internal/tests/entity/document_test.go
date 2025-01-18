@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"factory/internal/tests/entity"
-	fc_entity "factory/internal/tests/entity/fc"
+	"github.com/metalfm/factory/internal/tests/entity"
+	fc_entity "github.com/metalfm/factory/internal/tests/entity/fc"
 )
 
 func TestCreditNote(t *testing.T) {

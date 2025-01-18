@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"testing"
 
-	fc_entity "factory/internal/tests/entity/fc"
+	fc_entity "github.com/metalfm/factory/internal/tests/entity/fc"
 
 	"github.com/stretchr/testify/assert"
 )

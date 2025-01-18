@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	fc_entity "factory/internal/tests/entity/fc"
+	fc_entity "github.com/metalfm/factory/internal/tests/entity/fc"
 )
 
 func TestUser(t *testing.T) {
