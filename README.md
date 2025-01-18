@@ -28,44 +28,44 @@ Let's ask the factory to build us a `User` with the required values:
 package test
 
 import (
-	"fmt"
-	"testing"
+    "fmt"
+    "testing"
 
-	"fc_test" // the generated factory code will be in this package
+    "fc_test" // the generated factory code will be in this package
 )
 
 //go:generate go run metalfm/factory/fcgen -type=User
 
 type User struct {
-	ID       int
-	Name     string
-	Location string
+    ID       int
+    Name     string
+    Location string
 }
 
 func TestUser(t *testing.T) {
-	factoryUser := fc_test.NewFactoryUser(User{
-		Location: "Cyprus", // this is default value for Location
-	}).
-		SeqInt(func(e *User, n int) {
-			e.ID = n
-		}).
-		OnName(func(e *User) {
-			e.Name = fmt.Sprintf("user-%d", e.ID)
-		})
+    factoryUser := fc_test.NewFactoryUser(User{
+            Location: "Cyprus", // this is default value for Location
+        }).
+        SeqInt(func(e *User, n int) {
+            e.ID = n
+        }).
+        OnName(func(e *User) {
+            e.Name = fmt.Sprintf("user-%d", e.ID)
+        })
 
-	for range 3 {
-		fmt.Printf("%+v", factoryUser.MustBuild())
-	}
+    for range 3 {
+        fmt.Printf("%+v", factoryUser.MustBuild())
+    }
 
-	// let's try to customize data
-	factoryUser.Name("name").Location("Lissabon")
+    // let's try to customize data
+    factoryUser.Name("name").Location("Lissabon")
 
-	fmt.Printf("%+v", factoryUser.MustBuild())
-	// Output:
-	// {ID:1 Name:user-1 Location:Cyprus}
-	// {ID:2 Name:user-2 Location:Cyprus}
-	// {ID:3 Name:user-3 Location:Cyprus}
-	// {ID:4 Name:_name_ Location:Lissabon}
+    fmt.Printf("%+v", factoryUser.MustBuild())
+    // Output:
+    // {ID:1 Name:user-1 Location:Cyprus}
+    // {ID:2 Name:user-2 Location:Cyprus}
+    // {ID:3 Name:user-3 Location:Cyprus}
+    // {ID:4 Name:_name_ Location:Lissabon}
 }
 
 ```
@@ -89,7 +89,7 @@ You can take a look at the generated code [here](link), it is very easy to under
 
 ### Random data
 Feel free to use any library to generate random data if you need it:
-```
+```go
 package test
 
 import (
@@ -121,7 +121,7 @@ func TestUser(t *testing.T) {
 ### UUID & CreatedAt
 Sometimes we want to generate a structure with valid but different fields, such as UUID or CreatedAt:
 
-```
+```go
 package test
 
 import (
@@ -153,7 +153,7 @@ func TestUser(t *testing.T) {
 
 ### Sub factory
 
-```
+```go
 package test
 
 import (
@@ -184,13 +184,12 @@ func TestOrder(t *testing.T) {
     factoryUser.Name("test")
     factoryOrder.User(factoryUser.MustBuild())
 }
-
 ```
 
 ### Save to database
 Sometimes we want not only to get a structure with the necessary data, but also to save it to a database. Or any other storage.
 
-```
+```go
 package test
 
 import (
@@ -234,7 +233,6 @@ func TestUser(t *testing.T) {
     // we created and got a user that is in the database
     user := factoryUser.MustBuildCtx(ctx)
 }
-
 ```
 
 ### Generics
@@ -242,7 +240,8 @@ See real world example [here](link).
 
 ### Setter priority
 You can always override the default values to get the desired data set for your test:
-```
+
+```go
 package test
 
 import (
@@ -272,7 +271,6 @@ func TestUser(t *testing.T) {
     // Output:
     // name_2
 }
-
 ```
 
 ### More examples
@@ -283,7 +281,7 @@ Try to find some example code in [tests](link to tests).
 
 Dotted imports are not supported. Just don't use them.
 
-```lang
+```go
 package test
 
 import (
@@ -295,12 +293,11 @@ type S struct {
     CreatedAt0 Time      // do not this
     CreatedAt1 time.Time // do this
 }
-
 ```
 
 Anonymous interfaces with methods are not supported, such fields will simply not be used in generation. 
 
-```
+```go
 package test
 
 type Handler interface { Handle() }
@@ -309,12 +306,11 @@ type S struct {
     Handler0 interface{ Handle() } // do not this
     Handler1 Handler               // do this
 }
-
 ```
 
 Generic names with lowercase letters are not supported, just name them with capital letters.
 
-```
+```go
 package test
 
 type S0[t any] struct { // do not this
@@ -324,7 +320,6 @@ type S0[t any] struct { // do not this
 type S1[T any] struct { // do this
     Field T
 }
-
 ```
 
 ## License
