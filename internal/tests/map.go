@@ -9,7 +9,7 @@ import (
 	"github.com/metalfm/factory/internal/tests/entity"
 )
 
-//go:generate go run ../../fcgen.go -type=Map,MapCrazy
+//go:generate go run ../../fcgen/fcgen.go -type=Map,MapCrazy
 
 //nolint:unused //need to test unexported fields
 type Map struct {

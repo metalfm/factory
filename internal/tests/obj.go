@@ -4,7 +4,7 @@ import (
 	"net/http"
 )
 
-//go:generate go run ../../fcgen.go -type=Obj,ObjUnExported,ObjEmbed,ObjEmbedPtr,ObjExternalInterface
+//go:generate go run ../../fcgen/fcgen.go -type=Obj,ObjUnExported,ObjEmbed,ObjEmbedPtr,ObjExternalInterface
 
 type Status string
 type status string

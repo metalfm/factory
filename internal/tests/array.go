@@ -5,7 +5,7 @@ import (
 	time1 "time"
 )
 
-//go:generate go run ../../fcgen.go -type=Array,ArrayPtr,ArraySel,ArrayObj,ArrayEmptyInterface
+//go:generate go run ../../fcgen/fcgen.go -type=Array,ArrayPtr,ArraySel,ArrayObj,ArrayEmptyInterface
 
 type ArrayStruct struct{}
 type arrayStruct struct{}

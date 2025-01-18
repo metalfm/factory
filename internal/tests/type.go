@@ -1,6 +1,6 @@
 package tests
 
-//go:generate go run ../../fcgen.go -type=Types,TypesEmpty,TypesPointer,TypesCrazy
+//go:generate go run ../../fcgen/fcgen.go -type=Types,TypesEmpty,TypesPointer,TypesCrazy
 
 //nolint:unused //need to test unexported fields
 type Types struct {

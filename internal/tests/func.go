@@ -7,7 +7,7 @@ import (
 	"github.com/metalfm/factory/internal/tests/entity"
 )
 
-//go:generate go run ../../fcgen.go -type=Func
+//go:generate go run ../../fcgen/fcgen.go -type=Func
 
 //nolint:unused //need to test unexported fields
 type Func struct {

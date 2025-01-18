@@ -5,7 +5,7 @@ import (
 	time1 "time"
 )
 
-//go:generate go run ../../fcgen.go -type=Slice,SliceSel,SliceFunc
+//go:generate go run ../../fcgen/fcgen.go -type=Slice,SliceSel,SliceFunc
 
 //nolint:unused //need to test unexported fields
 type Slice struct {

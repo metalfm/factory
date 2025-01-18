@@ -5,7 +5,7 @@ import (
 	time1 "time"
 )
 
-//go:generate go run ../../fcgen.go -type=Chan,ChanUnExport,ChanEmbed
+//go:generate go run ../../fcgen/fcgen.go -type=Chan,ChanUnExport,ChanEmbed
 
 type Chan struct {
 	Chan0 chan int

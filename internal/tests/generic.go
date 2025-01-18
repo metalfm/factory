@@ -4,7 +4,7 @@ import (
 	"github.com/metalfm/factory/internal/tests/entity"
 )
 
-//go:generate go run ../../fcgen.go -type=Generic
+//go:generate go run ../../fcgen/fcgen.go -type=Generic
 
 type Gen[t any] interface {
 	Generate(t) t

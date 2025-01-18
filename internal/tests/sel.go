@@ -9,7 +9,7 @@ import (
 	"github.com/metalfm/factory/internal/tests/entity"
 )
 
-//go:generate go run ../../fcgen.go -type=Sel,SelUnExport,SelEmbedAlias,SelEmbed,SelEmbedPtr
+//go:generate go run ../../fcgen/fcgen.go -type=Sel,SelUnExport,SelEmbedAlias,SelEmbed,SelEmbedPtr
 
 type Sel struct {
 	Time0 time.Time

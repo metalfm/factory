@@ -1,6 +1,6 @@
 package tests
 
-//go:generate go run ../../fcgen.go -type=Interface,InterfaceEmpty
+//go:generate go run ../../fcgen/fcgen.go -type=Interface,InterfaceEmpty
 
 //nolint:unused //need to test unexported fields
 type empty interface{}
