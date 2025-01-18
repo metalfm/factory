@@ -16,7 +16,7 @@ Code generation and this library come to the rescue, which will help write facto
 
 ## Install
 ```
-go install metalfm/factory/fcgen@latest
+go install github.com/metalfm/factory/fcgen@latest
 ```
 
 ## Okey, show me the code

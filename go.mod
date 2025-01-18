@@ -1,4 +1,4 @@
-module factory
+module github.com/metalfm/factory
 
 go 1.23.3
 
