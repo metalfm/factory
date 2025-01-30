@@ -19,6 +19,21 @@ Code generation and this library come to the rescue, which will help write facto
 go install github.com/metalfm/factory/fcgen@latest
 ```
 
+## CLI options
+```
+Usage of fcgen:
+        fcgen [flags] -type T [directory]
+Arguments:
+        [directory] if no set, '.' is uses
+Flags:
+  -out string
+        output directory; default fc/<type>_gen.go for each type
+  -tags string
+        comma-separated list of build tags to apply
+  -type string
+        comma-separated list of type names; must be set
+```
+
 ## Okey, show me the code
 
 This is just an example, for simplicity we will describe everything in one file.
@@ -236,7 +251,7 @@ func TestUser(t *testing.T) {
 ```
 
 ### Generics
-See real world example [here](https://github.com/metalfm/factory/blob/main/internal/tests/entity/document_test.go).
+See real world example, [in tests](https://github.com/metalfm/factory/blob/main/internal/tests/entity/document_test.go) and [entities](https://github.com/metalfm/factory/blob/master/internal/tests/entity/document.go).
 
 ### Setter priority
 You can always override the default values to get the desired data set for your test:
