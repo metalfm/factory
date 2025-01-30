@@ -19,6 +19,10 @@ jobs:
         with:
           go-version: ${{ matrix.go-version }}
       - run: make gen
-      - run:
       - name: if any modified files exists
-        run: ./diff.sh
+        run: |
+          if [ `git status --porcelain | wc -l` -gt 0 ]; then
+            git --no-pager diff
+            git --no-pager status -s
+            exit 1
+          fi
