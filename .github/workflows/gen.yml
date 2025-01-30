@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  gen:
     strategy:
       matrix:
         go-version: [1.22.x, 1.23.x]
@@ -23,6 +23,5 @@ jobs:
       - name: if any modified files exists
         run: |
           if [ `git status --porcelain | wc -l` -gt 0 ]; then
-            git --no-pager diff
-            exit 1
+            git --no-pager diff && exit 1
           fi
