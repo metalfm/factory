@@ -36,6 +36,8 @@ Flags:
 
 ## Okey, show me the code
 
+
+
 This is just an example, for simplicity we will describe everything in one file.
 Let's ask the factory to build us a `User` with the required values:
 
