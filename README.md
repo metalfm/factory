@@ -15,8 +15,16 @@ For example, a user leaves an order, we want to test that the order is valid, sa
 Code generation and this library come to the rescue, which will help write factories preparing a structure with a pre-defined set of data with the ability to easily change the data.
 
 ## Install
+
+### Classic way
+
 ```
 go install github.com/metalfm/factory/fcgen@latest
+```
+
+### Go >= 1.24
+```
+go get -tool github.com/metalfm/factory/fcgen@latest
 ```
 
 ## CLI options
