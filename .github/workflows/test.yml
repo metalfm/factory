@@ -6,12 +6,17 @@ on:
 permissions:
   contents: read
 
+env:
+  GO_VERSION_1: 1.23.x
+  GO_VERSION_2: 1.24.x
+  OS: ubuntu-latest
+
 jobs:
   test:
     strategy:
       matrix:
-        go-version: [1.22.x, 1.23.x]
-        os: [ubuntu-latest]
+        go-version: [${{ env.GO_VERSION_1 }}, ${{ env.GO_VERSION_2 }}]
+        os: [${{ env.OS }}]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4

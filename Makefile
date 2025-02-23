@@ -1,5 +1,5 @@
 lint:
-	go run -modfile=tools/go.mod github.com/golangci/golangci-lint/cmd/golangci-lint run --allow-parallel-runners
+	go tool -modfile=tools/go.mod github.com/golangci/golangci-lint/cmd/golangci-lint run --allow-parallel-runners
 .PHONY: lint
 
 gen:
