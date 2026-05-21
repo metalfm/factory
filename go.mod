@@ -3,7 +3,7 @@ module github.com/metalfm/factory
 go 1.24
 
 require (
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 	golang.org/x/tools v0.33.0
 )
 
